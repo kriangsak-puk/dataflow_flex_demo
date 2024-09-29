@@ -1,0 +1,30 @@
+
+{
+  "name": "Batch beam Python flex template",
+  "description": "Batch beam example for python flex template.",
+  "parameters": [
+    {
+      "name": "input_gcs_path",
+      "label": "Input GCS path for the CSV file",
+      "helpText": "GCS path for the CSV file to read from. Must be a valid Cloud Storage URL, beginning with gs://.",
+      "regexes": [
+          "(gs:\/\/.+)"
+        ]
+    },
+    {
+      "name": "output_bq_dataset",
+      "label": "Output BigQuery dataset",
+      "helpText": "Name of the BigQuery dataset to write to."
+    },
+    {
+      "name": "output_bq_table",
+      "label": "Output BigQuery table",
+      "helpText": "Name of the BigQuery table to write to."
+    },
+    {
+      "name": "temp_location",
+      "label": "Temporary location for pipeline artifacts",
+      "helpText": "GCS path for temporary storage of pipeline artifacts."
+    }
+  ]
+}
